@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<!--[if IE 7]>         <html class="ie7 ie no-js"> <![endif]-->
+<!--[if IE 8]>         <html class="ie8 ie no-js"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]--> 
+<head>
+	<title>Shoshi-azurepcr-corrected</title>
+	<meta charset="utf-8">
+	<!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=Edge"/><![endif]-->
+	<meta name="description" content="">
+	<meta name="author" content="">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,300' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="css/style.css">
+	<script src="js/modernizr-2.8.2.min.js"></script>
+    <script src="js/plotly-latest.min.js"></script>
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <script type = "text/javascript" src = "KitDom.json"></script>
+    <script type = "text/javascript" src = "js/readjson.js"></script>
+</head>
+
+<body>
+    <div id="wrapper">
+    	<div id="main">
+    		<div id="primary">
+            	<div id="content">
+                    <ul class="horizontal-nav">
+                        <li><a href="#" class="first-nav slide-toggle">first</a>
+                            <div class="nav-content">
+                                <div class="onwrap">
+                                    <a href="#" title="Log in">Log in</a>
+                                    <a href="#" title="Log out">Log out</a>
+                                </div><!--/.onwrap-->
+                            </div><!--/.first-nav-content-->
+                        </li>
+                        <li><a href="#" class="second-nav slide-toggle">second</a>
+                            <div class="nav-content second-nav-content">
+                                <div class="onwrap">
+                                    <a href="#" title="Import Data">Import Data</a>
+                                    <a href="#" title="Export Data">Export Data</a>
+                                </div><!--/.onwrap-->
+                            </div><!--/.first-nav-content-->
+                        </li>
+                        <li><a href="#" class="third-nav slide-toggle">third</a>
+                            <div class="nav-content third-nav-content">
+                                <div class="onwrap">
+                                    <a href="#" title="Show 2d Visualisation">Show 2d Visualisation</a>
+                                    <a href="#" title="Show 3d Visualisation">Show 3d Visualisation</a>
+                                </div><!--/.onwrap-->
+                                </div><!--/.first-nav-content-->
+                        </li>
+                    </ul><!--/.horizontal-nav-->
+                	
+                    <div class="module-box">
+                    	<div class="wrap">
+                        	<div class="bord-rox" title="Bord ROX"><a class="prev" href="#">Next</a>Bord ROX<a class="next" href="#">Next</a></div >
+                            <div class="quantity-data">
+                            	<ul class="cf">
+                                	<li><span class="data"><span class="data-num">40</span><br>Max Accuracy<br>Available</span></li>
+                                	<li><span class="data"><span class="data-num">30</span><br>Curves</span></li>
+                                	<li><span class="data"><span class="data-num">60</span><br>Current<br>Accuracy</span></li>
+                                </ul>
+                            </div><!--/.quantity-data-->
+
+                            <p>
+                            <div class = "curveLabel" style = "margin-left: 35%;">
+                                Curve ID: <input id = "curve_id" type = "text" onchange = "setDropDownList()">
+                            </div>
+
+                            <div class="graphs cf">
+                                
+                            	<figure><div id = "dim2" style = "width: 242px; height: 220px;"></div></figure>
+                                <figure><div id = "curve" style = "width: 321px; height: 290px;"></div></figure>
+                                <figure><div id = "dim3" style = "width: 251px; height: 221px;"></div></figure>-->
+                                <!--<figure><img src="images/graph-01.jpg" width="242" height="220" alt=""></figure>
+                                <figure><img src="images/graph-02.jpg" width="321" height="290" alt=""></figure>
+                                <figure><img src="images/graph-03.jpg" width="252" height="221" alt=""></figure>-->
+                            </div><!--/.graphs-->
+
+                             <div class = "container">
+                                <div class = "row">
+                                    <div class = "col-md-2" style = "margin-left: 5%;">
+                                        X: <select id = "dim2x">
+                                            
+                                        </select>
+                                        <br>
+                                        Y: <select id = "dim2y">
+                                               
+                                        </select>
+                                    </div>
+                                    <div class = "col-md-3 col-md-offset-2" style = "margin-left: 12%;">
+                                        <button style = "background: url(images/refresh.png); width: 42px; height: 42px;"
+                                        onclick = "drawGraphs()"/>
+                                    </div>
+                                    <div class = "col-md-2">
+                                        X: <select id = "dim3x">
+                                            
+                                        </select>
+                                        <br>
+                                        Y: <select id = "dim3y">
+                                               
+                                        </select>
+                                        <br>
+                                        Z: <select id = "dim3z">
+                                               
+                                        </select>
+                                        <br>
+                                    </div>
+                                </div>
+                            </div>
+
+                           <div class="show-hide">
+                           	<a href="#" title="Show/Hide">Show/Hide</a>
+                           </div><!--/.show-hide -->
+                            <ul class="target-nav">
+                                <li><a href="#" title="Target Controls" >Target Controls</a></li>
+                                <li><a href="#" title="Positive Samples">Positive Samples</a></li>
+                                <li><a href="#" title="Negative Samples">Negative Samples</a></li>
+                            </ul><!--/.target-nav -->
+                            <ul class="icons-nav">
+                                <li><a class="plus-icon" href="#">+</a></li>
+                                <li><a class="sign-icon" href="#">+</a></li>
+                                <li><a class="circle-icon" href="#">+</a></li>
+                                <li><a class="dotted-icon" href="#">+</a></li>
+                                <li><a class="solid-icon" href="#">+</a></li>
+                            </ul><!--/.icons-nav -->
+                        </div><!--/.wrap-->
+                    </div><!--/.module-box-->
+                </div><!--/#content-->
+            </div><!--/#primary-->
+    	</div><!--/#main -->
+    </div><!--/#wrapper-->
+    <script src="js/jquery.js"></script>
+    <script src="js/general.js"></script>
+    <script text="text/javascript">
+        var json_data;
+
+        jQuery(document).ready(function(){
+            jQuery('#dim2x').val('1');
+            jQuery('#dim2y').val('2');
+            jQuery('#dim3x').val('1');
+            jQuery('#dim3y').val('2');
+            jQuery('#dim3z').val('2');
+
+            ($.ajax({
+                url: 'KitDom.json',
+                dataType: "json",
+                success: function (data) {
+                    var text = JSON.stringify(data);
+                    json_data = JSON.parse(text);
+
+                    var observations = json_data.Observations;
+
+                    var curve_id = jQuery("#curve_id").val();
+                    var result = $.grep(json_data.Observations, function(element, index) {
+                        return (element.ObservationId == curve_id);
+                    });
+
+                    for (i = 0; i < result[0].Features.length; i++)
+                    {
+                        var sel = document.getElementById('dim2x');
+                        sel.options.add(new Option("Y" + (i + 1), (i + 1)));
+
+                        var sel = document.getElementById('dim2y');
+                        sel.options.add(new Option("Y" + (i + 1), (i + 1)));
+
+                        var sel = document.getElementById('dim3x');
+                        sel.options.add(new Option("Y" + (i + 1), (i + 1)));
+
+                        var sel = document.getElementById('dim3y');
+                        sel.options.add(new Option("Y" + (i + 1), (i + 1)));
+
+                        var sel = document.getElementById('dim3z');
+                        sel.options.add(new Option("Y" + (i + 1), (i + 1)));
+                    }
+                }
+            }));
+
+            //alert(json_data);
+        });
+
+        function setDropDownList() {
+
+            var observations = json_data.Observations;
+
+            var curve_id = jQuery("#curve_id").val();
+            var result = $.grep(json_data.Observations, function(element, index) {
+                return (element.ObservationId == curve_id);
+            });
+
+            $('#dim2x').find('option').remove();
+            $('#dim2y').find('option').remove();
+            $('#dim3x').find('option').remove();
+            $('#dim3y').find('option').remove();
+            $('#dim3z').find('option').remove();
+
+            for (i = 0; i < result[0].Features.length; i++)
+            {
+                var sel = document.getElementById('dim2x');
+                sel.options.add(new Option("Y" + (i + 1), (i + 1)));
+
+                var sel = document.getElementById('dim2y');
+                sel.options.add(new Option("Y" + (i + 1), (i + 1)));
+
+                var sel = document.getElementById('dim3x');
+                sel.options.add(new Option("Y" + (i + 1), (i + 1)));
+
+                var sel = document.getElementById('dim3y');
+                sel.options.add(new Option("Y" + (i + 1), (i + 1)));
+
+                var sel = document.getElementById('dim3z');
+                sel.options.add(new Option("Y" + (i + 1), (i + 1)));
+            }
+        }
+
+        function drawGraphs() {
+
+            drawCurve();
+            draw2D();
+            draw3D();
+        }
+
+        function drawCurve() {
+            var x_data = [];
+            var y_data;
+            var graph_data = [];
+            var layout;
+
+            var curve_id = jQuery("#curve_id").val();
+            var result = $.grep(json_data.Observations, function(element, index) {
+                return (element.ObservationId == curve_id);
+            });
+
+            var run_id = result[0].RunId;
+
+            for (i = 0; i < 45; i++)
+            {
+                x_data.push(i);
+            }
+            y_data = result[0].Readings;
+
+            result = $.grep(json_data.Observations, function(element, index) {
+                return (element.RunId == run_id);
+            });
+
+            for (i = 0; i < result.length; i++)
+            {
+                if (result[i].Role == "PTC")
+                {
+                    graph_data.push({x: x_data, y: result[i].Readings, type: 'scatter', line: {color: 'rgb(255, 0, 0)'}});
+                }
+                else if (result[i].Role == "NTC")
+                {
+                    graph_data.push({x: x_data, y: result[i].Readings, type: 'scatter', line: {color: 'rgb(0, 255, 0)'}});
+                }
+                else
+                {
+                    graph_data.push({x: x_data, y: result[i].Readings, type: 'scatter', line: {color: 'rgb(0, 0, 0)'}});   
+                }
+            }
+
+            graph_data.push({x: x_data, y: y_data, type: 'scatter', line: {color: 'rgb(0, 0, 255)'}});
+
+            layout = {
+                autosize: false,
+                width: 321,
+                height: 290,
+                margin: {
+                    l: 40,
+                    r: 20,
+                    b: 30,
+                    t: 30,
+                    pad: 4
+                },
+                showlegend: false,
+                paper_bgcolor: '#7f7f7f',
+                plot_bgcolor: '#ffffff'
+            };
+            Plotly.newPlot('curve', graph_data, layout);
+        }
+
+        function draw2D() {
+            var graph_data = [];
+            var observations = json_data.Observations;
+            var cur_x, cur_y, x_axis, y_axis;
+
+            var result = $.grep(json_data.Observations, function(element, index) {
+                return (element.ObservationId == jQuery('#curve_id').val());
+            });
+
+            for (i = 0; i < observations.length; i++)
+            {
+                x_axis = observations[i].Features[jQuery("#dim2x").val() - 1];
+                y_axis = observations[i].Features[jQuery("#dim2y").val() - 1];
+
+                if (i == jQuery('#curve_id').val())
+                {
+                    cur_x = x_axis;
+                    cur_y = y_axis;
+                }
+                else if (observations[i].MixChannelId == result[0].MixChannelId)
+                    graph_data.push({x: [x_axis], y: [y_axis], mode: 'markers', type: 'scatter'});
+            }
+            graph_data.push({x: [cur_x], y: [cur_y], mode: 'markers', type: 'scatter', marker: { color: 'rgb(0, 0, 0)', }});
+
+            layout = {
+                autosize: false,
+                width: 242,
+                height: 220,
+                margin: {
+                    l: 40,
+                    r: 20,
+                    b: 30,
+                    t: 30,
+                    pad: 4
+                },
+                showlegend: false,
+                paper_bgcolor: '#cfffcf',
+                plot_bgcolor: '#ffffff'
+            };
+
+            Plotly.newPlot('dim2', graph_data, layout);
+        }
+
+        function draw3D() {
+            var graph_data = [];
+            var xs = [], ys = [], zs = [];
+            var observations = json_data.Observations;
+            var cur_x, cur_y, cur_z, x_axis, y_axis, z_axis;
+
+            var result = $.grep(json_data.Observations, function(element, index) {
+                return (element.ObservationId == jQuery('#curve_id').val());
+            });
+
+            layout = {
+                autosize: false,
+                width: 252,
+                height: 221,
+                margin: {
+                    l: 40,
+                    r: 20,
+                    b: 30,
+                    t: 30,
+                    pad: 4
+                },
+                showlegend: false,
+                paper_bgcolor: '#ffcfcf',
+                plot_bgcolor: '#ffffff'
+            };
+            
+            for (i = 0; i < observations.length; i++)
+            {
+                x_axis = observations[i].Features[jQuery("#dim3x").val() - 1];
+                y_axis = observations[i].Features[jQuery("#dim3y").val() - 1];
+                z_axis = observations[i].Features[jQuery("#dim3z").val() - 1];
+
+                if (i == jQuery('#curve_id').val())
+                {
+                    cur_x = x_axis;
+                    cur_y = y_axis;
+                    cur_z = z_axis;
+                    
+                }
+                else if (observations[i].MixChannelId == result[0].MixChannelId)
+                {
+                    xs.push(x_axis);
+                    ys.push(y_axis);
+                    zs.push(z_axis);
+                }
+            }
+            graph_data = [{x: xs, y: ys, z: zs, mode: 'markers', type: 'scatter3d', marker: { color: 'rgb(50, 255, 50)', opacity: 0.25}}];
+            graph_data.push({x: [cur_x], y: [cur_y], z: [cur_z], mode: 'markers', type: 'scatter3d', marker: { color: 'rgb(0, 0, 0)', }});
+            Plotly.newPlot('dim3', graph_data, layout);
+
+            //Plotly.newPlot('dim3', graph_data, layout);
+        }
+
+    </script>
+</body>
+
+</html>
